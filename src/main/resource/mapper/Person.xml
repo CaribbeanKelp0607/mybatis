@@ -9,6 +9,12 @@
         SELECT * FROM PERSON WHERE ID=#{id}
     </select>
 
+    <select id="queryByUserNames" parameterType="java.lang.String" resultType="Person">
+        SELECT * FROM PERSON WHERE username=#{value}
+    </select>
+
+
+
     <update id="updatePerson">
         UPDATE PERSON SET USERNAME=#{userName},AGE=#{age},MOBILEPHONE=#{mobilePhone} WHERE ID=#{id}
     </update>
